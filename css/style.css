@@ -15,7 +15,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #10011d 0%, #280c3e 100%);
+  background: linear-gradient(135deg, #10011d 0%, #391753 100%);
   width: 100vw;
   height: 100vh;
   font-family: "poppins", sans-serif;
@@ -29,17 +29,31 @@ body {
   background-attachment: fixed;
 }
 
-.main-navigation a {
-  float: left;
-  color: var(--primary-color);
-  text-align: center;
-  padding: 35px;
-  text-decoration: none;
-  font-size: 17px;
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.main-navigation :hover {
+.nav-list li {
+  margin: 10px 30px;
+  padding: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+li a:hover,
+li a:focus {
   color: var(--seconday-color);
+  transform: translate(0px, -5px);
+  transition: all 0.3s;
 }
 
 .project-link {
@@ -47,35 +61,24 @@ body {
   color: var(--font-color);
 }
 
-.page-header {
-  overflow: hidden;
-}
-
-.page-header_logo {
-  float: left;
-  padding: 10px;
-}
-
-.page-header_item {
-  float: right;
-}
-
 .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 700px;
-  margin: 0 auto;
+  margin: 10% auto;
 }
 
 .profile_portrait {
-  float: left;
   margin: 40px;
   width: 250px;
   height: auto;
   border-radius: 50%;
 }
 
-.profile_block {
-  margin: 200px;
-  float: center;
+.profile_text {
+  margin: 40px;
+  color: var(--primary-color);
 }
 
 .span-name {
@@ -83,25 +86,25 @@ body {
 }
 
 .body-section {
-  float: center;
-  width: 800px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  padding: 10px;
+  margin: 25% auto;
 }
 .body-text {
-  float: center;
   margin: 40px;
-
   color: var(--primary-color);
 }
 .body-button {
   background-color: var(--button-color);
+  align-self: center;
   color: var(--primary-color);
+  text-decoration: none;
   border: none;
   width: 300px;
   padding: 13px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  margin: 10px;
   font-size: 16px;
   border-radius: 15px;
 }
@@ -121,12 +124,10 @@ body {
   text-align: center;
 }
 
-/* start grid fallback */
 .grid__item {
   display: inline-block;
   width: 33%;
 }
-/* end grid fallback */
 
 @supports (display: grid) {
   .grid {
@@ -154,4 +155,12 @@ body {
   opacity: 1.5;
   transform: translate(0px, -10px);
   box-shadow: 0 0 15px var(--seconday-color);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  padding: 10px;
+  margin: 5% auto;
 }
