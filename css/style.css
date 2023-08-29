@@ -3,6 +3,7 @@
 :root {
   --primary-color: #f6f6f9;
   --seconday-color: #900cdd;
+  --third-color: #10011d;
   --button-color: #5e5e5e;
   --link-visited: #a0a0a0;
   --link-hover: #b343f3;
@@ -157,10 +158,30 @@ li a:focus {
   box-shadow: 0 0 15px var(--seconday-color);
 }
 
-.contact-section {
+.footer-content {
   display: flex;
-  justify-content: space-between;
-  width: 700px;
-  padding: 10px;
-  margin: 20% auto;
+  justify-content: center;
+  background-color: var(--third-color);
+  width: 100%vw;
+  height: 100%vh;
+}
+
+.contact-footer {
+  display: flex;
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+
+.contact-title {
+  color: var(--seconday-color);
+}
+
+.social-links-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
